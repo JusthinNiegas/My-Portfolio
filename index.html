@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="mobile-overlay" onclick="toggleMenu()"></div>
+    <header class="header">
+        <h1 class="header-title">Web Developer Portfolio</h1>
+        <p class="header-description">
+            Crafting beautiful and functional websites that are clean and affordable.
+        </p>
+
+        <div id="sidebar-container">
+            <button class="menu-button" onclick="toggleMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            <nav id="sidebar">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                </ul>
+            </nav> 
+        </div> 
+
+    </header>
+    <!-- Hand Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h2 class="welcome-text">
+                Welcome to my portfolio
+            </h2>
+        </div>
+
+        <div class="hero-image">
+            <img src="./assets/hand.jpg" class="hand-image">
+        </div>
+    </section>
+
+    <!-- About -->
+     <section id="about" class="about-section">
+        <div class="about-container">
+            <div class="about-image">
+                <img src="/assets/Me.jpg">
+            </div>
+
+            <div>
+                <h2 class="about-title">About Me</h2>
+                
+                <p class="about-text">
+                    Hi! I'm James Justhin, a BSIT student and aspiring web developer who enjoys building simple, clean, and responsive websites. I'm passionate about learning new technologies and creating digital solutions that are both functional and user-friendly.
+                </p>
+
+                <p class="about-text">
+                    I enjoy coding, designing, and turning ideas into real projects. My goal is to grow as a developer, gain experience in the tech industry, and continue building meaningful applications.    I have experience with HTML, CSS, JavaScript, and React, and I'm always eager to expand my skill set. My goal is to create websites that not only look great but also provide a seamless user experience. I'm excited to share my projects and connect with others in the web development community!
+                </p>
+
+
+            </div>
+
+        </div>
+
+     </section>
+
+     <section id="projects" class="projects-section">
+        <h2 class="projects-title">Projects</h2>
+
+        <div class="projects-container">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="/assets/PUPet.png">
+                </div>
+
+                <h3>Project 1</h3>
+                <p>PUPet - Gamified Task Management Application</p>
+                <a href="/pages/project1.html" class="project-button">View Project</a>
+            </div>
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="/assets/lib.png">
+                </div>
+
+                <h3>Project 2</h3>
+                <p>LibraryWeb - Simple Web Libary, implementing CRUD and MySql for Database</p>
+                <a href="/pages/project2.html" class="project-button">View Project</a> 
+
+            </div>
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="/assets/StudHub-logo.png">
+                </div>
+
+                <h3>Project 3</h3>
+                <p>StudHub - A personal student organizer app.</p>
+                <a href="/pages/project3.html" class="project-button">View Project</a>
+            </div>            
+
+
+        </div>
+     </section>
+
+     <!--Contact-->
+     <section id="contact" class="contact-section">
+        <div class="contact-container">
+            <div class="contact-form-area">
+                <h2 class="contact-heading">Get In Touch</h2>
+
+                <form id="contact-form"
+                action="https://formsubmit.co/a2d9b669020ed18a0103a4908df7979c"
+                method="POST"
+                target="hidden_iframe"
+                onsubmit="showPopup()">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+
+                    <input type="text" name="name" placeholder="Your name" required>
+                    <input type="email" name="email" placeholder="your.email@example.com" required>
+                    <textarea name="message" placeholder="Your message here..." required></textarea>
+                    <button type="submit">Send Message</button>
+                
+            
+                </form>
+                <iframe name="hidden_iframe" style="display:none;"></iframe>
+
+            </div>
+
+            <div class="contact-profile">
+                <div class="profile-card">
+                    <img src="/assets/Me.jpg">
+                </div>
+
+                <p class="contact-text">
+                    Let's work together to create something amazing!
+                </p>
+
+                <div class="social-icons">
+                    <a href="https://github.com/JusthinNiegas"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/jamesjusthin-d-niegas-25a67637b/"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:jamesjusthinbusinessmail@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- POPUP -->
+        <div id="success-popup" class="popup">
+            <div class="popup-content">
+                <h2>✅ Message Sent!</h2>
+                <p>Thank you for reaching out. I'll get back to you as soon as possible.</p>
+                <button onclick="closePopup()">Close</button>
+            </div>
+        </div>
+        
+     </section>
+     <footer class="footer">
+        <p class="footer-text">© 2026 James Justhin. All rights reserved.</p>
+     </footer>
+     <script src="https://unpkg.com/scrollreveal"></script>
+     <script src="script.js"></script>
+
+</body>
+</html>
