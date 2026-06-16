@@ -1,0 +1,456 @@
+/* ================= GENERAL ================= */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior:smooth;
+    overflow-x: hidden;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #000000;
+    color: #fafafa;
+    font-family: 'Monserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x:hidden;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+section{
+    width: 100%;
+    max-width: 100vw;
+}
+
+.container{
+    width: min(1100px, 90%);
+    margin:auto;
+    padding: 20px;
+}
+/* PROJECT CARD */
+/* Header */
+.header{
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.header-title{
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.header-description{
+    color: #9a9a9a;
+    margin-top: 10px;
+}
+
+/* Menu Button */
+.menu-button{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: 1px solid #000000;
+    cursor: pointer;
+    color: #fafafa;
+    background-color: #000000;
+    background:none;
+    z-index: 1100;
+}
+.menu-icon{
+    width: 30px;
+}block
+
+.fa-solid fa-bars{
+    width: 30px;
+    transition: 0.3s;
+}
+.fa-solid fa-bars:hover{
+    transform: scale(1.1);
+}
+
+/* Sidebar */
+
+#sidebar-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row-reverse;
+}
+
+#sidebar{
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background: #000;
+    transition: 0.4s;
+    z-index: 1000;
+    padding-top: 80px;
+}
+#sidebar.active{
+    right: 0;
+}
+#sidebar ul{
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+#sidebar li{
+    padding: 15px;
+}
+#sidebar ul li{
+    padding:20px;
+}
+#sidebar a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+#sidebar ul li a{
+    color:#fafafa;
+    text-decoration:none;
+    font-size:18px;
+    transition:0.3s;
+}
+#sidebar ul li a:hover{
+    color:#9a9a9a;
+}
+/* ================= HERO ================= */
+.hero-section{
+    padding: 0;
+    margin: 0;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:40px;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+.hero-image{
+    width: min(700px, 100%);
+}
+.welcome-text{
+    font-size:48px;
+    font-weight:700;
+}
+@media (min-width:2000px){
+    .hero-section{
+        display: flex;
+        max-width: 1500px;
+        margin: auto;
+    }
+    .hand-image{
+        max-width: 600px;
+        object-fit: cover;
+        height: auto;
+        margin-left: 600px;
+    }
+}
+
+.hand-image{
+    display:block;
+    max-width:700px;
+}
+/* ================= ABOUT ================= */
+.about-section{
+    padding:100px 10%;
+}
+.about-container{
+    display:flex;
+    align-items:center;
+    gap:60px;
+}
+.about-image img{
+    display:block;
+    width:100%;
+    height:auto;
+    object-fit:cover;
+    border-radius:15px;
+    border:2px solid #fafafa;
+    box-shadow:0 0 25px rgba(255,255,255,0.05);
+}
+.about-content{
+    max-width:650px;
+}
+.about-title{
+    font-size:60px;
+    margin-bottom:25px;
+}
+.about-text{
+    font-size:18px;
+    line-height:1.8;
+    color:#bfbfbf;
+    margin-bottom:20px;
+}
+/* ================= PROJECTS ================= */
+.projects-section{
+    padding:100px 10%;
+}
+.projects-title{
+    font-size:60px;
+    margin-bottom:60px;
+}
+.projects-container{
+    display:grid;
+    gap:24px;
+    flex-wrap:wrap;
+    justify-content:center;
+    grid-template-columns:1fr;
+}
+/* PROJECT CARD */
+.project-card{
+    flex:1;
+    min-width:320px;
+    max-width:480px;
+    background:#121212;
+    border:1px solid #1f1f1f;
+    border-radius:16px;
+    padding:25px;
+    transition:0.3s;
+    box-shadow:0 0 15px rgba(0,0,0,0.4);
+}
+.project-card:hover{
+    transform:translateY(-10px);
+    border-color:#444;
+    box-shadow:0 10px 30px rgba(0,0,0,0.6);
+}
+/* PROJECT IMAGE */
+.project-image{
+    width:100%;
+    height:180px;
+    background:#2a2a2a;
+    border-radius:12px;
+    margin-bottom:20px;
+    overflow:hidden;
+}
+.project-image img{
+    max-width:100%;
+    display:block;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+/* PROJECT TEXT */
+.project-name{
+    font-size:24px;
+    margin-bottom:10px;
+}
+.project-text{
+    color:#a0a0a0;
+    font-size:15px;
+    line-height:1.6;
+    margin-bottom:20px;
+}
+/* PROJECT BUTTON */
+.project-button{
+    display:inline-block;
+    padding:10px 18px;
+    border:1px solid #fafafa;
+    border-radius:8px;
+    text-decoration:none;
+    color:#fafafa;
+    font-size:14px;
+    transition:0.3s;
+}
+.project-button:hover{
+    background:#fafafa;
+    color:#000000;
+}
+/* ================= CONTACT ================= */
+.contact-section{
+    padding:100px 10%;
+}
+.contact-container{
+    display:flex;
+    justify-content:space-between;
+    gap:80px;
+    flex-wrap:wrap;
+}
+.contact-form-area{
+    flex:1;
+    max-width:500px;
+}
+.contact-heading{
+    font-size:48px;
+    margin-bottom:30px;
+}
+.contact-form-area label{
+    display:block;
+    margin-top:20px;
+    margin-bottom:8px;
+}
+.contact-form-area input,
+.contact-form-area textarea{
+    width:100%;
+    padding:14px;
+    background:#0d0d0d;
+    border:1px solid #222;
+    border-radius:10px;
+    color:#fafafa;
+}
+.contact-form-area textarea{
+    height:120px;
+    resize:none;
+}
+.contact-form-area button{
+    margin-top:25px;
+    width:100%;
+    padding:14px;
+    background:#fafafa;
+    color:#000;
+    border:none;
+    border-radius:10px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+.contact-form-area button:hover{
+    background:#dcdcdc;
+}
+/* PROFILE CARD */
+.contact-profile{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+}
+.profile-card{
+    width:220px;
+    height:260px;
+    border:1px solid #777;
+    border-radius:12px;
+    overflow:hidden;
+    margin-bottom:20px;
+}
+.profile-card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+.contact-text{
+    color:#aaa;
+    font-size:18px;
+    max-width:260px;
+    line-height:1.6;
+    margin-bottom:20px;
+}
+/* SOCIAL ICONS */
+.social-icons{
+    display:flex;
+    gap:20px;
+}
+.social-icons a{
+    color:#fafafa;
+    font-size:22px;
+    transition:0.3s;
+}
+.social-icons a:hover{
+    color:#9a9a9a;
+}
+/* ================= FOOTER ================= */
+.footer{
+    text-align:center;
+    padding:30px;
+}
+.footer-text{
+    color:#7a7a7a;
+}
+/* ================= SCROLLBAR ================= */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-thumb{
+    background:#2a2a2a;
+    border-radius:10px;
+}
+/* SUCCESS POPUP */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.popup{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.8);
+    justify-content:center;
+    align-items:center;
+    z-index:2000;
+}
+.popup-content{
+    background:#121212;
+    padding:40px;
+    border-radius:12px;
+    text-align:center;
+    width:320px;
+    color:white;
+}
+.popup-content button{
+    margin-top:20px;
+    padding:10px 20px;
+    border:none;
+    background:#fafafa;
+    color:#000;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+
+/* ================= MOBILE ================= */
+@media(max-width:480px){
+    .hero-section{
+        flex-direction:column;
+        text-align:center;
+    }
+    .welcome-text{
+        font-size:32px;
+    }
+    .hand-image{
+        max-width:100%;
+        margin-top:20px;
+    }
+    .about-container{
+        flex-direction:column;
+        text-align:center;
+    }
+    .about-title{
+        font-size:40px;
+    }
+    .about-image img{
+        width:200px;
+        height:200px;
+    }
+    .projects-container{
+        flex-direction:column;
+        align-items:center;
+    }
+    .contact-container{
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+    }
+}
